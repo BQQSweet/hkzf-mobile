@@ -1,0 +1,13 @@
+#grid_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 33.3333333333%;
+  margin-top: 30px;
+}
+#grid_item .name {
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */
