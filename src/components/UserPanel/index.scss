@@ -1,9 +1,38 @@
 #UserPanel {
-  .headImg {
+  position: relative;
+  height: 180px;
+  width: 90%;
+  margin-top: 100px;
+  .backImg{
+    width: 500px;
+    height: 500px;
+    border-radius: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-450px);
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
   }
-  .panel {
-    height: 120px;
-    width: 90%;
-    background-color: #ccc;
+  .panel{
+    width: 100%;
+    height: 100%;
+    background-color: #b1bede;
+    background-image: linear-gradient(290deg, #b1bede 0%, #959fc3 100%);
+    position: absolute;
+    box-shadow: #bdbdbd 0 4px 10px;
+    .headImg {
+      width: 60px;
+      height: 60px;
+      border:4px solid #fff;
+      border-radius: 50%;
+      background-color: red;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      box-shadow: #9e9e9e 0 2px 5px;
+    }
   }
+
 }

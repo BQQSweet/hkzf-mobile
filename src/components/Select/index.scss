@@ -1,0 +1,34 @@
+#select {
+  position: relative;
+  .input {
+    input {
+      width: 80px;
+      height: 40px;
+      border: none;
+      outline: none;
+      text-align: center;
+    }
+  }
+
+  .list {
+    width: 100%;
+    position: absolute;
+    transition: height 0.5s;
+    overflow: hidden;
+    z-index: 999;
+    top: 40px;
+    background-color: #000;
+    ul {
+      list-style: none;
+      height: 100%;
+      background-color: #fff;
+      overflow-y: auto;
+      li {
+        height: 20px;
+      }
+      li:hover{
+        background: #ccc;
+      }
+    }
+  }
+}

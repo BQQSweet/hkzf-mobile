@@ -1,0 +1,11 @@
+#index_top{
+  position: relative;
+  .float{
+    border-radius: 5px;
+    width:85%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
