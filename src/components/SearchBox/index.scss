@@ -1,7 +1,36 @@
 #search_box{
-  width: 100%;
   display: flex;
-  .adm-input-wrapper{
-    background: #fff;
+  align-items: center;
+  .icon-ditu{
+    font-size: 28px;
+    color: rgba($color:#fff,$alpha:0.6);
+    margin-left: 10px;
+  }
+  .left{
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 40px;
+    background-color: rgba($color:#fff,$alpha:0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #939393 0 2px 8px ;
+  }
+  .change_city{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-right: 1px solid #999999;
+  }
+  .input{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    .adm-input-wrapper{
+      padding-left: 5px;
+    }
   }
 }

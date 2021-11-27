@@ -23,7 +23,7 @@ class Carousel extends Component {
         return this.state.swipers.map((item, index) => (
             <Swiper.Item key={index}>
                 <img
-                    src={`http://localhost:8080${item.imgSrc}`}
+                    src={`${this.baseUrl}${item.imgSrc}`}
                     style={{width: '100%'}}
                     onClick={() => {
                         Toast.show(`你点击了卡片 ${index + 1}`)

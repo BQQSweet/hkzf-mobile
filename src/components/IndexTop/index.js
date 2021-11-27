@@ -8,7 +8,7 @@ class IndexTop extends Component {
             <div id='index_top'>
                 <Carousel/>
                 <div className="float">
-                    <SearchBox/>
+                    <SearchBox history={this.props.history}/>
                 </div>
             </div>
         );

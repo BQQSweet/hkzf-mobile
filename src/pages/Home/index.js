@@ -38,7 +38,7 @@ class Home extends Component {
     const { tabList } = this.state;
     const { location, history } = this.props;
     return (
-      <div id="#home">
+      <div id="home">
         <div className="tab_bar">
           <TabBar tabList={tabList} history={history} location={location} />
         </div>

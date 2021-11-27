@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2963822 */
-  src: url('fonts/iconfont.woff2?t=1637850570602') format('woff2'),
-       url('fonts/iconfont.woff?t=1637850570602') format('woff'),
-       url('fonts/iconfont.ttf?t=1637850570602') format('truetype');
+  src: url('iconfont.woff2?t=1637991808578') format('woff2'),
+       url('iconfont.woff?t=1637991808578') format('woff'),
+       url('iconfont.ttf?t=1637991808578') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,18 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ditu:before {
+  content: "\e619";
+}
+
+.icon-sousuo:before {
+  content: "\e62f";
+}
+
+.icon-qiehuan:before {
+  content: "\e647";
 }
 
 .icon-hezuohuobantianchong:before {
