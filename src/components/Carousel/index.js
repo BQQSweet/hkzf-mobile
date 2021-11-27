@@ -9,7 +9,6 @@ class Carousel extends Component {
     getSwiper = async () => {
         const [err, res] = await this.$axios.get("/home/swiper")
         if (err) console.log(err)
-        console.log(res)
         this.setState({
             swipers: res.body
         })
@@ -23,6 +22,7 @@ class Carousel extends Component {
         return this.state.swipers.map((item, index) => (
             <Swiper.Item key={index}>
                 <img
+                    alt="图片"
                     src={`${this.baseUrl}${item.imgSrc}`}
                     style={{width: '100%'}}
                     onClick={() => {
@@ -34,7 +34,6 @@ class Carousel extends Component {
     }
 
     render() {
-        const {swipers} = this.state
         return (
             <div id='carousel'>
                 <Swiper autoplay

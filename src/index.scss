@@ -2,15 +2,10 @@
   padding: 0;
   margin:0;
 }
-html,body {
+html,body,#root,.App {
   font-family: 'Microsoft YaHei UI Light';
-  color: #333;
+  color: $text-main;
   width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
   background: $main-background;
 }
-.adm-tab-bar-item-active{
-  color: white;
-  background-color: #b1bede;
-}
+

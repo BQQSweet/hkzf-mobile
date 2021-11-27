@@ -1,7 +1,7 @@
 #UserPanel {
   position: relative;
   height: 180px;
-  width: 90%;
+  width: 94%;
   margin-top: 100px;
   .backImg{
     width: 500px;
@@ -21,7 +21,8 @@
     background-color: #b1bede;
     background-image: linear-gradient(290deg, #b1bede 0%, #959fc3 100%);
     position: absolute;
-    box-shadow: #bdbdbd 0 4px 10px;
+    border-radius: 5px;
+    //box-shadow: #bdbdbd 0 4px 10px;
     .headImg {
       width: 60px;
       height: 60px;

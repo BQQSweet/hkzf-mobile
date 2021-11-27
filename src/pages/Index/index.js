@@ -4,7 +4,13 @@ import IndexMenu from "../../components/IndexMenu";
 import IndexGroup from "../../components/IndexGroup";
 import IndexNews from "../../components/IndexNews";
 
+
+// const map=new BM
 class Index extends Component {
+    componentDidMount() {
+
+    }
+
     render() {
         const {history} = this.props
         return (

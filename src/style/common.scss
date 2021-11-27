@@ -1,0 +1,170 @@
+/*弹性布局 -start*/
+@mixin df-x-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin df-x-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin df-x-sa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin df-x-se {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin df-y-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin df-y-sb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin df-y-se {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@mixin df-y-sa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/**弹性布局 -end*/
+
+/*内外边距 start*/
+@for $i from 5 through 10 {
+  .p#{$i}{
+    padding:$i+px;
+  }
+  .px#{$i}{
+    padding:0 $i+px;
+  }
+  .py#{$i}{
+    padding:$i+px 0;
+  }
+  .m#{$i}{
+    margin:$i+px;
+  }
+  .mx#{$i}{
+    margin:0 $i+px;
+  }
+  .my#{$i}{
+    margin:$i+px 0;
+  }
+}
+@for $i from 1 through 3 {
+  .mt#{$i*10} {
+    margin-top: $i*10px;
+  }
+  .mr#{$i*10} {
+    margin-right: $i*10px;
+  }
+  .mb#{$i*10} {
+    margin-bottom: $i*10px;
+  }
+  .ml#{$i*10} {
+    margin-left: $i*10px;
+  }
+}
+
+@for $i from 4 through 8 {
+  .mt#{$i} {
+    margin-top: $i+px;
+  }
+  .mr#{$i} {
+    margin-right: $i+px;
+  }
+  .mb#{$i} {
+    margin-bottom: $i+px;
+  }
+  .ml#{$i} {
+    margin-left: $i+px;
+  }
+}
+
+@for $i from 1 through 3 {
+  .pt#{$i*10} {
+    padding-top: $i*10px;
+  }
+  .pr#{$i*10} {
+    padding-right: $i*10px;
+  }
+  .pb#{$i*10} {
+    padding-bottom: $i*10px;
+  }
+  .pl#{$i*10} {
+    padding-left: $i*10px;
+  }
+}
+
+@for $i from 4 through 8 {
+  .pt#{$i} {
+    padding-top: $i+px;
+  }
+  .pr#{$i} {
+    padding-right: $i+px;
+  }
+  .pb#{$i} {
+    padding-bottom: $i+px;
+  }
+  .pl#{$i} {
+    padding-left: $i+px;
+  }
+}
+
+/*内外边距 end*/
+
+/*宽高 start*/
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+
+.flow-h {
+  overflow: hidden;
+}
+
+/*宽高 end*/
+
+/*字体大小 start*/
+@for $i from 10 through 28 {
+  @if($i%2==0){
+    .fs#{$i} {
+      font-size: $i+px;
+    }
+  }
+}
+/*字体大小 end*/
+
+.bg-w{
+  background: #ffffff;
+}
+
+.circle{
+  border-radius: 50%;
+}
+

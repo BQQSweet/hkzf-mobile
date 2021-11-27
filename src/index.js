@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from './utils/ajax'
 import {Provider} from 'react-redux'
 import {BrowserRouter as Router} from 'react-router-dom'
-import './style/color.scss'
+import './style/variable.scss'
 import App from './App';
 import store from './store'
 import './index.scss';

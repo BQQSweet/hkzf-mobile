@@ -1,11 +1,15 @@
 #grid_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-basis: calc(100% / 3);
-  margin-top: 30px;
-  .name {
-    margin-top: 5px;
+  @include df-y-c;
+
+  .icon {
+    box-sizing: content-box;
+    width: 40px;
+    height: 40px;
+    background-color: rgba($color: #b1bede, $alpha: 0.2);
+    @include df-x-c;
+    padding: 5px;
+    span {
+      font-size: 30px;
+    }
   }
 }

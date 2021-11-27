@@ -40,7 +40,7 @@ class IndexMenu extends Component {
     render() {
         const {itemList} = this.state
         return (
-            <div id='index_menu'>
+            <div id='index_menu' className='bg-w'>
                 <Grid columns={4} gap={0}>
                     {
                         itemList.map(v => {

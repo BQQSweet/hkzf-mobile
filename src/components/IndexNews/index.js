@@ -7,7 +7,6 @@ class IndexNews extends Component {
     getNews = async () => {
         const [err, res] = await this.$axios.get('/home/news');
         if (err) return
-        console.log(res)
         this.setState({
             newsList: res.body
         })
@@ -20,19 +19,19 @@ class IndexNews extends Component {
     render() {
         const {newsList} = this.state
         return (
-            <div id="index_news">
+            <div id="index_news" className='mt10 p10'>
                 <div className="title">
                     <h3>最新资讯</h3>
                 </div>
-                <div className="list">
+                <div className="list mt10">
                     {
                         newsList.map(v => {
                             return (
-                                <div key={v.id} className="item">
+                                <div key={v.id} className="item bg-w mb10 p10">
                                     <div className="left_img">
                                         <img src={this.baseUrl + v.imgSrc} alt=""/>
                                     </div>
-                                    <div className="right">
+                                    <div className="right px10">
                                         <div className="title">{v.title}</div>
                                         <div className="bottom"><span className="from">{v.from}</span><span
                                             className="time">{v.date}</span></div>

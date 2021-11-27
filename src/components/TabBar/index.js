@@ -9,7 +9,7 @@ class Tab extends Component {
         const {location,tabList} = this.props
         console.log(tabList)
         return (
-            <div id="tab_bar">
+            <div id="tab_bar" className='bg-w'>
                 <TabBar onChange={this.setActiveKey} activeKey={location.pathname}>
                     {tabList.map(item => (
                         <TabBar.Item key={item.path} icon={item.icon} title={item.name} />

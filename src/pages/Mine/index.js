@@ -5,7 +5,7 @@ import './index.scss'
 export default class Mine extends Component {
   render() {
     return (
-      <div id="mine">
+      <div id="mine" className='w100'>
         <UserPanel />
         <MyGrid />
       </div>
