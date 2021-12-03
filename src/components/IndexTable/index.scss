@@ -1,0 +1,25 @@
+#index_table{
+  ul{
+    background: #fff;
+    list-style: none;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    li{
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 26px;
+      height: 26px;
+      margin-bottom: 5px;
+      border-radius: 50%;
+      transition: all 0.5s;
+      &.active{
+        background: #959fc3;
+      }
+    }
+  }
+}

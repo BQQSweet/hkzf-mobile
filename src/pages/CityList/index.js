@@ -11,10 +11,18 @@ const TITLE_HEIGHT = 30
 const NAME_HEIGHT = 50
 
 class CityList extends Component {
-    state = {
-        cityData: {},
-        cityIndex: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            cityData: {},
+            cityIndex: [],
+            startIndex: 0
+        }
+
+        this.cityList = React.createRef()
     }
+
+
     //获取城市列表
     getCityList = async () => {
         const [err, res] = await this.$axios.get('/area/city?level=1')
@@ -42,8 +50,8 @@ class CityList extends Component {
     async getCurrentCity() {
         const curCity = await get();
         let {cityData, cityIndex} = this.state
-        cityData = {...cityData, '#': [curCity]}
-        cityIndex = ['#', ...cityIndex]
+        cityData = {...cityData, 'cur': [curCity]}
+        cityIndex = ['cur', ...cityIndex]
         return {
             cityData,
             cityIndex
@@ -81,40 +89,58 @@ class CityList extends Component {
         const tag = cityIndex[index]
         const list = cityData[tag]
         return (
-            <div key={key} style={style} className='city p10'>
-                <div className="title">{formatCityTag(tag)}</div>
+            <div key={key} style={style} className='city'>
+                <div className="title p10">{formatCityTag(tag)}</div>
                 {
-                    list.map(v => <div className='name' key={v.value}>{v.label}</div>)
+                    list.map(v => <div className='name p10' key={v.value}>{v.label}</div>)
                 }
             </div>
         );
     }
-
-    async componentDidMount() {
-        this.init()
+    /*获取渲染行的数据信息*/
+    onRowsRendered = ({startIndex}) => {
+        if (startIndex !== this.state.startIndex) {
+            this.setState({
+                startIndex
+            })
+        }
+    }
+    /*获取子组件传递的数据*/
+    getChildrenMsg = (result, index) => {
+        this.cityList.current.scrollToRow(index)//TODO:此处有bug 因为react版本问题导致scrollToRow定位不准确
     }
 
 
+    async componentDidMount() {
+        await this.init()
+        this.cityList.current.measureAllRows()
+    }
+
     render() {
         const {history} = this.props
-        const {cityIndex} = this.state
+        const {cityIndex, startIndex} = this.state
         return (
             <div id='city_list' className='wh100'>
                 <Nav history={history} name='城市选择'/>
                 <AutoSizer>
                     {
                         ({width, height}) =>
-                            <List width={width}
-                                  height={height}
-                                  rowHeight={this.getRowHeight}
-                                  rowCount={cityIndex.length}
-                                  rowRenderer={this.rowRenderer}/>
+                            <List
+                                ref={this.cityList}
+                                width={width}
+                                height={height}
+                                rowHeight={this.getRowHeight}
+                                rowCount={cityIndex.length}
+                                rowRenderer={this.rowRenderer}
+                                onRowsRendered={this.onRowsRendered}
+                                scrollToAlignment="start"
+                            />
 
                     }
                 </AutoSizer>
-                <IndexTable/>
-
-
+                <div className="index_table">
+                    <IndexTable parent={this} startIndex={startIndex} cityIndex={cityIndex}/>
+                </div>
             </div>
         );
     }

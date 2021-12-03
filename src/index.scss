@@ -1,8 +1,12 @@
-*{
+* {
   padding: 0;
-  margin:0;
+  margin: 0;
 }
-html,body,#root,.App {
+
+body {
+  overflow: hidden
+}
+html, body, #root, .App {
   font-family: 'Microsoft YaHei UI Light';
   color: $text-main;
   width: 100%;
