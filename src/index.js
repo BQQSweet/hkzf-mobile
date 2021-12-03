@@ -7,6 +7,7 @@ import './style/variable.scss'
 import App from './App';
 import store from './store'
 import './index.scss';
+import 'react-virtualized/styles.css'
 
 
 React.Component.prototype.$axios = axios

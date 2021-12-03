@@ -11,7 +11,7 @@ class Nav extends Component {
     render() {
         const {name} = this.props
         return (
-            <div id='nav'>
+            <div id='nav' className='wh100'>
                 <NavBar onBack={this.back}>{name}</NavBar>
             </div>
         );

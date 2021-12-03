@@ -48,7 +48,7 @@
 /**弹性布局 -end*/
 
 /*内外边距 start*/
-@for $i from 5 through 10 {
+@for $i from 5 through 15 {
   .p#{$i}{
     padding:$i+px;
   }

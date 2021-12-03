@@ -1,0 +1,17 @@
+#city_list{
+  padding-top: 50px;
+  .city{
+    display: flex;
+    flex-direction: column;
+    border-top:1px solid $border-color;
+    .title{
+      color: $text-sub;
+      height: 30px;
+    }
+    .name{
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
